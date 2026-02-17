@@ -5,18 +5,85 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="Homepage.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     </head>
 
 <style>
 
+    html {
+        scroll-behavior: smooth
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap');
+
+    body {
+        overflow: auto;
+        background-color: #e1e1e1;
+        font-size: 25px;
+        font-family: 'STIX Two Text', Elsie, serif;
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        }
+
+    .head {
+        background-image: url("images/background2.jpg");
+        background-position: center 77%;
+        height: max-content;
+        height: 650px;
+    }
+
+    .header {
+        height: 300px;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        visibility: 50px;
+    }
+
+    .nav {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 20px;
+    }
+
 </style>
 
-<header>
-    <h1>Nuova Vetta</h1>
-</header>
+<div class="container">
+
+    <div class="head">
+
+        <div class="top"><p>4401 Hill St, Edmond OK 73013</p></div>
+
+        <div class="header">
+
+            <div class="overlay_box">
+                <img src="images/Logo.png" height="150" width="300">
+                <div class="nav">
+                    <a href="#about">ABOUT US</a>
+                    <a href="#services">SERVICES</a>
+                    <a href="#contact">CONTACT US</a>
+
+                </div>
+            </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 <body>
 
 </body>
 
+<footer>
+
+</footer>
+
+</div>
 </html>
