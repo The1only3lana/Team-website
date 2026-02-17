@@ -14,7 +14,8 @@
     color: black;
 }
 
-.overlay_box img {
+.image {
+    background: rgba(255, 255, 255, 0.7);
     position: absolute;
     left: 0px;
     padding: 0px;
