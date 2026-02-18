@@ -16,6 +16,8 @@
         scroll-behavior: smooth
     }
 
+    
+
     @import url('https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap');
 
     body {
@@ -34,53 +36,55 @@
         height: max-content;
         height: 650px;
         font-size: 20px;
+        position: relative;
     }
 
     .header {
-        height: 300px;
-        display: inline-flex;
-        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
+        padding: 0px 40px;
+        background: rgba(255, 255, 255, 0.75);
     }
 
     .navbar {
-        background: rgba(255, 255, 255, 0.7);
-        overflow: hidden;
-        text-align: right;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        
+    }
+
+
+    .navbar a {
+        text-decoration: none;
         color: black;
-        margin-top: 20px;
-        padding-right: 10px;
-        height: 145px;
+        font-weight: bold;
+    }
+
+    .navbar a:hover {
+        color: dodgerblue;
     }
 
 </style>
-
-<div class="container">
 
     <div class="head">
 
         <div class="top"><p>4401 Hill St, Edmond OK 73013</p></div>
 
         <div class="header">
-
                 
-
-            <div class="overlay_box">
-
-                <div class="image"><img src="images/Logo.png" width="300px"></div>
+                <div class="logo">
+                    <img src="images/Logo.png" width="175px">
+                </div>
 
                 <div class="navbar">
-
                     <a href="Menu.html">MENU</a>
-                    <a href="Specials.html">SPECIALS</a>
                     <a href="Orderpage.html">ORDER ONLINE</a>
 
-                    <button class="reservation"><a href="Reservation.html">RESERVATIONS</a></button>
+                    <a href="Reservation.html" class="reservation" style="color: white;">RESERVATIONS</a>
 
                 </div>
-            </div>
 
-                </div>
             </div>
 
         </div>
@@ -88,12 +92,14 @@
     </div>
 
 <body>
-
+    <div class="Specials">
+        <h1>Specials</h1>
+        <p>Here are some of our specials for the week</p>
+    </div>
 </body>
 
 <footer>
 
 </footer>
 
-</div>
 </html>
