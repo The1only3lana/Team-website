@@ -9,10 +9,174 @@
 
 <style>
 
+    html {
+        scroll-behavior: smooth;
+    }
+
+   body {
+        overflow: auto;
+        background-color: #ad9c90;
+        font-size: 25px;
+        font-family: 'STIX Two Text', Elsie, serif;
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        }
+
+    p {
+        font-size: 20px;
+    }
+
+    .head {
+        background-image: url("images/background2.jpg");
+        background-position: center 77%;
+        height: max-content;
+        height: 650px;
+        font-size: 20px;
+        position: relative;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: left;
+        padding: 0px 40px;
+        background: rgba(255, 255, 255, 0.75);
+    }
+
+    .navbar {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        
+    }
+
+
+    .navbar a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+
+    .navbar a:hover {
+        color: dodgerblue;
+    }
+
 </style>
 
-<body>
+<div style="right: auto;">
+    <a href="index.html">Back to Main Page</a>
+</div>
 
+<body>
+<header>
+    <h3 id="cartList">Cart</h3>
+</header>
+<h1>Nuova Vetta</h2>
+<h2>Order</h2>
+<head></head>
+
+<!--BREAKFAST SECTION-->
+
+<div class="order-block">
+    <h3>Italian Omelette</h3>
+    <p>$12</p>
+    <button onclick="addItem('Italian Omelette', 12)">Add to Cart</button>
+</div>
+
+<div class="order-block">
+    <h3>Fresh Crosissant</h3>
+    <p>$5</p>
+    <button onclick="addItem('Fresh Crosissant', 5)">Add to Cart</button>
+</div>
+
+<div class="order-block">
+    <h3>Cappuccino</h3>
+    <p>$4</p>
+    <button onclick="addItem('Cappuccino', 4)">Add to Cart</button>
+</div>
+
+<!--BRUNCH SECTION-->
+
+<div class="order-block">
+    <h3>Avocado Toast</h3>
+    <p>$11</p>
+    <button onclick="addItem('Avocado Toast', 11)">Add to Cart</button>
+</div>
+
+<div class="order-block">
+    <h3>Breakfast Panini</h3>
+    <p>$13</p>
+    <button onclick="addItem('Breakfast Panini', 13)">Add to Cart</button>
+</div>
+
+<!--LUNCH SECTION-->
+
+<div class="order-block">
+    <h3>Margherita Pizza</h3>
+    <p>$16</p>
+    <button onclick="addItem('Margherita Pizza', 16)">Add to Cart</button>
+</div>
+
+<div class="order-block">
+    <h3>Chicken Alfredo</h3>
+    <p>$18</p>
+    <button onclick="addItem('Chicken Alfredo', 18)">Add to Cart</button>
+</div>
+
+<!--DINNER SECTION-->
+
+<div class="order-block">
+    <h3>Lasagna</h3>
+    <p>$20</p>
+    <button onclick="addItem('Lasagna', 20)">Add to Cart</button>
+</div>
+
+<div class="order-block">
+    <h3>Seafood Risotto</h3>
+    <p>$24</p>
+    <button onclick="addItem('Seafood Risotto', 24)">Add to Cart</button>
+</div>
+
+<!--DESSERT SECTION-->
+
+<div class="order-block">
+    <h3>Tiramisu</h3>
+    <p>$9</p>
+    <button onclick="addItem('Tiramisu', 9)">Add to Cart</button>
+</div>
+
+<div class="order-block">
+    <h3>Cannoli</h3>
+    <p>$8</p>
+    <button onclick="addItem('Cannoli', 8)">Add to Cart</button>
+</div>
+
+<!--BEVERAGES SECTION-->
+<div class="order-block">
+    <h3>Espresso</h3>
+    <p>$4</p>
+    <button onclick="addItem('Espresso', 4)">Add to Cart</button>
+</div>
+
+<div class="order-block">
+    <h3>Italian Soda</h3>
+    <p>$6</p>
+    <button onclick="addItem('Italian Soda', 6)">Add to Cart</button>
+</div>
+<script>
+    let cartList = [];
+
+    function addItem(name, price) {
+    const item = {
+        name: name,
+        price: price
+    };
+
+    cart.push(item);
+    updateCartDisplay();
+}
+</script>
 </body>
 
 </html>

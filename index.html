@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Homepage</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Homepage.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap" rel="stylesheet">
+    </head>
+
+<style>
+
+    html {
+        scroll-behavior: smooth
+    }
+
+    body {
+        overflow: auto;
+        background-color: #ad9c90;
+        font-size: 25px;
+        font-family: 'STIX Two Text', Elsie, serif;
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        }
+
+    .head {
+        background-image: url("images/background.jpg");
+        background-size: cover;
+        background-position: center 50%;
+        height: max-content;
+        height: 650px;
+        font-size: 20px;
+        position: relative;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 40px;
+        background: rgba(255, 255, 255, 0.75);
+    }
+
+    .navbar {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        
+    }
+
+
+    .navbar a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+
+    .navbar a:hover {
+        color: dodgerblue;
+    }    
+
+</style>
+
+    <div class="head">
+
+        <div class="top"><p>4401 Hill St, Edmond OK 73013</p></div>
+
+        <div class="header">
+                
+                <div class="logo">
+                    <img src="images/Logo.png" width="175px">
+                </div>
+
+                <div class="navbar">
+                    <a href="Menu.html">MENU</a>
+                    <a href="Orderpage.html">ORDER ONLINE</a>
+
+                    <a href="Reservation.html" class="reservation" style="color: white;">RESERVATIONS</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<body>
+    <div class="Specials">
+        <h1>Specials</h1>
+        <p>Here are some of our speicals this week</p>
+    </div>
+    <div class="Specials-Section">
+
+        <div class="special-row slide-in">
+            <div class="special-text">
+                <h2>Breakfast Panini</h2>
+                <p>A warm, toasty panini layered with fluffy scrambled eggs, melted cheese, and your choice of savory breakfast meats—all pressed between golden, crispy artisan bread. 
+                    Each bite delivers a perfect balance of creamy, crunchy, and smoky flavors, making it a satisfying way to start the morning. 
+                    Ideal for a quick grab‑and‑go breakfast or a cozy sit‑down meal.
+                </p>
+            </div>
+                <img src="images/Sandwich.jpg" class="special-img slide-in">
+            </div>
+
+            <div class="special-row reverse slide-in">
+                <img src="images/Chicken Alredo.jpg" class="special-img slide-in">
+            <div class="special-text" style="padding-right: 40px;">
+                <h2>Chicken Alfredo</h2>
+                <p>Tender grilled chicken tossed in a rich, velvety Alfredo sauce made with real cream, butter, and Parmesan. 
+                    Served over perfectly cooked fettuccine, this dish is indulgent, smooth, and deeply satisfying.</p>
+            </div>
+        </div>
+
+        <div class="special-row slide-in">
+            <div class="special-text">
+                <h2>Tiramisu</h2>
+                <p>A classic Italian dessert layered with espresso‑soaked ladyfingers, silky mascarpone cream, and a dusting of rich cocoa. 
+                    Light, velvety, and perfectly balanced, this Tiramisu delivers the ideal blend of sweetness and bold coffee flavor.</p>
+            </div>
+                <img src="images/Tiramisu.jpg" class="special-img slide-in">
+        </div>
+
+        <div class="special-row reverse slide-in">
+            <img src="images/Seafood Risotto.jpg" class="special-img slide-in">
+            <div class="special-text" style="padding-right: 40px;">
+                <h2>Seafood Risotto</h2>
+                <p>Creamy Arborio rice simmered slowly in a savory broth, then finished with shrimp, scallops, and a touch of white wine. 
+                    Rich, silky, and full of coastal flavor, this risotto is comfort food elevated.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const elements = document.querySelectorAll(".slide-in");
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                        }
+                    });
+                });
+
+            elements.forEach(el => observer.observe(el));
+        });
+    </script>
+
+    <div class="ordernow">
+        <h1>ORDER ONLINE</h1>
+        <p style="color: #795f4c; margin-bottom: 5px;">
+            A classic Italian home made meal is waiting for you!
+        </p>
+
+        <p style="margin-top: 0px;">
+            Let us handle dinner tonight. Browse our specials, 
+            add your choices, and enjoy chef‑prepared meals delivered 
+            to your door or ready for pick up.
+        </p>
+
+            <a href="Orderpage.html"><button>ORDER NOW</button></a>
+    </div>
+
+        <br>
+    
+    <script>
+        const popupMessage = document.getElementById("popupMessage");
+
+        popupMessage.innerHTML = `
+      Thank you for creating an account with us! <br>
+      Your appointment has been scheduled for <strong>${formattedDate}</strong>.
+    `;
+    </script>
+    
+    <div></div>
+</body>
+
+<footer>
+
+</footer>
+
+</html>
