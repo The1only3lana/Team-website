@@ -30,7 +30,10 @@
 .Specials {
     background-color: #99826d;
     color: black;
-    box-shadow: 0px 0px 10px black;
+    padding: 30px 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    position: relative;
+    z-index: 10;
 }
 
 .Specials h1 {
@@ -44,3 +47,100 @@
     margin: 0px;
     padding: 20px 0px;
 }
+
+.Specials-Section {
+    position: relative;
+    background-image: url(images/Italy.jpg);
+    background-size: cover;
+    background-position: center 50%; 
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    z-index: 1;
+}
+
+.Specials-Section::before { 
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 0;
+}
+
+.special-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.special-row.reverse .special-text {
+    order: 2;
+}
+
+.special-row.reverse .special-img {
+    order: 1;
+}
+
+.special-img {
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.special-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 40px;
+}
+
+.special-text h2 {
+    font-family: 'Elsie';
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.special-text p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.slide-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.slide-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ordernow {
+    font-family: "Playwrite AU SA", cursive;
+    color: white;
+    margin: 0px 30px;
+}
+
+.ordernow h1 {
+    font-family: 'Elise';
+    margin: 35px 0px 20px;
+}
+
+.ordernow button {
+    font-family: 'Elise';
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    height: 50px;
+    width: 200px;
+    background-color: #795f4c;
+    color: #ad9c90;
+}
+
