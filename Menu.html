@@ -20,98 +20,29 @@
 
     <div class="menu-block">
         <h3>Breakfast</h3>
-        <button onclick="openMenu('breakfast')">View Menu</button>
-    </div>
-
-    <div class="menu-block">
-        <h3>Brunch</h3>
-        <button onclick="openMenu('brunch')">View Menu</button>
+        <a href="breakfast.html">View Menu</a>
     </div>
 
     <div class="menu-block">
         <h3>Lunch</h3>
-        <button onclick="openMenu('lunch')">View Menu</button>
+        <a href="lunch.html"> View Menu</a>
     </div>
 
     <div class="menu-block">
         <h3>Dinner</h3>
-        <button onclick="openMenu('dinner')">View Menu</button>
+        <a href="dinner.html">View Menu</a>
     </div>
 
     <div class="menu-block">
         <h3>Desserts</h3>
-        <button onclick="openMenu('desserts')">View Menu</button>
+        <a href="desserts.html">View Menu</a>
     </div>
 
     <div class="menu-block">
         <h3>Beverages</h3>
-        <button onclick="openMenu('beverages')">View Menu</button>
+        <a href="beverages.html">View Menu</a>
     </div>
-
-</div>
-
-<!-- BREAKFAST PAGE -->
-<div id="breakfast" class="menu-page hidden">
-    <h2>Breakfast</h2>
-    <p>Italian Omelette - $12</p>
-    <p>Fresh Croissant - $5</p>
-    <p>Cappuccino - $4</p>
-    <button onclick="goBack()">Back to Menus</button>
-</div>
-
-<!-- BRUNCH PAGE -->
-<div id="brunch" class="menu-page hidden">
-    <h2>Brunch</h2>
-    <p>Avocado Toast - $11</p>
-    <p>Breakfast Panini - $13</p>
-    <button onclick="goBack()">Back to Menus</button>
-</div>
-
-<!-- LUNCH PAGE -->
-<div id="lunch" class="menu-page hidden">
-    <h2>Lunch</h2>
-    <p>Margherita Pizza - $16</p>
-    <p>Chicken Alfredo - $18</p>
-    <button onclick="goBack()">Back to Menus</button>
-</div>
-
-<!-- DINNER PAGE -->
-<div id="dinner" class="menu-page hidden">
-    <h2>Dinner</h2>
-    <p>Lasagna - $20</p>
-    <p>Seafood Risotto - $24</p>
-    <button onclick="goBack()">Back to Menus</button>
-</div>
-
-<!-- DESSERTS PAGE -->
-<div id="desserts" class="menu-page hidden">
-    <h2>Desserts</h2>
-    <p>Tiramisu - $9</p>
-    <p>Cannoli - $8</p>
-    <button onclick="goBack()">Back to Menus</button>
-</div>
-
-<!-- BEVERAGES PAGE -->
-<div id="beverages" class="menu-page hidden">
-    <h2>Beverages</h2>
-    <p>Espresso - $4</p>
-    <p>Italian Soda - $6</p>
-    <button onclick="goBack()">Back to Menus</button>
-</div>
-
-<script>
-function openMenu(menuId) {
-    document.getElementById("menuHome").style.display = "none";
-    document.getElementById(menuId).classList.remove("hidden");
-}
-
-function goBack() {
-    document.getElementById("menuHome").style.display = "block";
-    document.querySelectorAll(".menu-page").forEach(page => {
-        page.classList.add("hidden");
-    });
-}
-</script>
+    
 </body>
 
 </html>

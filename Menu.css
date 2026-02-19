@@ -3,3 +3,17 @@ body {
     background: #fdf6ec;
     text-align: center;
 }
+a {
+    font-size: 30px;
+    text-decoration: underline;
+    color:black
+}
+h1{
+    font-weight:5;
+}
+
+
+h2 {
+    font-weight: 520;
+    font-style: italic;
+}
