@@ -8,10 +8,244 @@
     </head>
 
 <style>
+    html {
+        scroll-behavior: smooth
+    }
 
+    body {
+        overflow: auto;
+        background-color: #ad9c90;
+        font-size: 18px;
+        font-family: 'STIX Two Text', Elsie, serif;
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        }
+
+    .head {
+        background-image: url("images/background.jpg");
+        background-size: cover;
+        background-position: center 50%;
+        height: max-content;
+        height: 650px;
+        font-size: 20px;
+        position: relative;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 40px;
+        background: rgba(255, 255, 255, 0.75);
+    }
+
+    .navbar {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        
+    }
+
+
+    .navbar a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+
+    .navbar a:hover {
+        color: dodgerblue;
+    }    
+
+    .footer {
+        background-color: #2a2725;
+        font-family:'Elise';
+    }
+
+    @media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .head {
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+
+    .footer-layout {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 15px;
+    }
+
+    .footer-row {
+        margin-bottom: 30px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    }
+
+}
 </style>
 
 <body>
+
+    <div class="head">
+
+        <div class="top"><p>4401 Hill St, Edmond OK 73013</p></div>
+
+        <div class="header">
+                
+                <div class="logo">
+                    <img src="images/Logo.png" width="175px">
+                </div>
+
+                <div class="navbar">
+                    <a href="Menu.html">MENU</a>
+                    <a href="Orderpage.html">ORDER ONLINE</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <section class="contact-section">
+    <h1>Contact / Reservations</h1>
+
+    <div class="form-container">
+
+        <div class="form-toggle">
+            <button id="contactBtn" class="active">Contact</button>
+            <button id="reserveBtn">Reserve Table</button>
+        </div>
+
+        <form id="mainForm">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+
+            <div id="contactFields">
+                <textarea id="message" placeholder="Your Message"></textarea>
+            </div>
+
+            <div id="reservationFields" style="display:none;">
+                <input type="date" id="date">
+                <input type="time" id="time">
+                <input type="number" id="guests" placeholder="Number of Guests" min="1">
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+
+        <div id="confirmation" class="confirmation-box"></div>
+
+    </div>
+
+</section>
+
+    <script>
+    const contactBtn = document.getElementById("contactBtn");
+    const reserveBtn = document.getElementById("reserveBtn");
+    const contactFields = document.getElementById("contactFields");
+    const reservationFields = document.getElementById("reservationFields");
+    const form = document.getElementById("mainForm");
+    const confirmation = document.getElementById("confirmation");
+
+    contactBtn.addEventListener("click", () => {
+        contactBtn.classList.add("active");
+        reserveBtn.classList.remove("active");
+        contactFields.style.display = "block";
+        reservationFields.style.display = "none";
+});
+
+reserveBtn.addEventListener("click", () => {
+    reserveBtn.classList.add("active");
+    contactBtn.classList.remove("active");
+    contactFields.style.display = "none";
+    reservationFields.style.display = "block";
+});
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+
+    if (reservationFields.style.display === "block") {
+        const date = document.getElementById("date").value;
+        const time = document.getElementById("time").value;
+        const guests = document.getElementById("guests").value;
+
+        confirmation.innerHTML = `
+            <strong>Reservation Confirmed!</strong><br>
+            Thank you, ${name}.<br>
+            Table for ${guests} on ${date} at ${time}.<br>
+            Confirmation sent to ${email}.
+        `;
+    } else {
+        const message = document.getElementById("message").value;
+
+        confirmation.innerHTML = `
+            <strong>Message Sent!</strong><br>
+            Thank you, ${name}.<br>
+            We will respond to ${email} soon.
+        `;
+    }
+
+    confirmation.style.display = "block";
+    form.reset();
+});
+</script>
+
+    <div class="footer">
+        <div class="footer-layout">
+
+            <div class="footer-row">
+                <h2>Location</h2>
+                <p>4401 Hill St, Edmond OK 73013</p>
+            </div>
+
+            <div class="footer-row">
+                <h2>Hours</h2>
+                <p>Monday - Friday</p>
+                <p>10:00 AM - 10:00 PM</p>
+
+                <p>Saturday - Sunday</p>
+                <p>9:00 AM - 10:45 PM</p>
+            </div>
+
+            <div class="footer-row">
+                <h2>Find us on</h2>
+                <p>4401 Hill St, Edmond OK 73013</p>
+
+                <h2>Contact us</h2>
+                <p class="icons"><i class="bi bi-facebook"></i><i class="bi bi-instagram"></i><i class="bi bi-tiktok"></i></p>
+                <p style="margin-top: 10px;">localnuovavetta@gmail.com</p>
+            </div>
+
+        </div>
+    </div>
+</footer>
 
 </body>
 

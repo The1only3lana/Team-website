@@ -144,3 +144,35 @@
     color: #ad9c90;
 }
 
+.footer-layout {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 100px;
+    flex-wrap: wrap;
+}
+
+.footer-row {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-row h2 {
+    color: #795f4c;
+    margin-bottom: 20px;
+}
+
+.footer-row p {
+    color: white;
+    margin: 5px 0;
+}
+
+.icons ::before {
+    display: inline-flex;
+    margin: 0px 15px;
+}
+
+.icons :hover {
+    background-color: white;
+    color: #ad9c90;
+    padding: 5px;
+}
