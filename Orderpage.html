@@ -61,7 +61,55 @@
     .navbar a:hover {
         color: dodgerblue;
     }
+    .footer {
+        background-color: #2a2725;
+        font-family:'Elise';
+    }.footer-layout {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 15px;
+    }
 
+    .footer-row {
+        margin-bottom: 30px;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+.footer-layout {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 100px;
+    flex-wrap: wrap;
+}
+
+.footer-row {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-row h2 {
+    color: #795f4c;
+    margin-bottom: 20px;
+}
+
+.footer-row p {
+    color: white;
+    margin: 5px 0;
+}
+
+.icons ::before {
+    display: inline-flex;
+    margin: 0px 15px;
+}
+
+.icons :hover {
+    background-color: white;
+    color: #ad9c90;
+    padding: 5px;
+}
 </style>
 
 <div style="right: auto;">
@@ -70,7 +118,9 @@
 
 <body>
 <header>
-    <h3 id="cartList">Cart</h3>
+    <h3>Cart</h3>
+    <ul id="cartList"></ul>
+    <p id="total"></p>
 </header>
 <h1>Nuova Vetta</h2>
 <h2>Order</h2>
@@ -79,9 +129,11 @@
 <!--BREAKFAST SECTION-->
 
 <div class="order-block">
+    <table>
     <h3>Italian Omelette</h3>
     <p>$12</p>
     <button onclick="addItem('Italian Omelette', 12)">Add to Cart</button>
+    </table>
 </div>
 
 <div class="order-block">
@@ -177,6 +229,34 @@
     updateCartDisplay();
 }
 </script>
+<div class="footer">
+        <div class="footer-layout">
+
+            <div class="footer-row">
+                <h2>Location</h2>
+                <p>4401 Hill St, Edmond OK 73013</p>
+            </div>
+
+            <div class="footer-row">
+                <h2>Hours</h2>
+                <p>Monday - Friday</p>
+                <p>10:00 AM - 10:00 PM</p>
+
+                <p>Saturday - Sunday</p>
+                <p>9:00 AM - 10:45 PM</p>
+            </div>
+
+            <div class="footer-row">
+                <h2>Find us on</h2>
+                <p>4401 Hill St, Edmond OK 73013</p>
+
+                <h2>Contact us</h2>
+                <p class="icons"><i class="bi bi-facebook"></i><i class="bi bi-instagram"></i><i class="bi bi-tiktok"></i></p>
+                <p style="margin-top: 10px;">localnuovavetta@gmail.com</p>
+            </div>
+
+        </div>
+    </div>
 </body>
 
 </html>
